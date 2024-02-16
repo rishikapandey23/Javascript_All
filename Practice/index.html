@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Navigation Menu</title>
+</head>
+<body>
+
+<!-- Navigation Container -->
+<div id="nav-container"></div>
+
+<script>
+  // Function to create a navigation menu
+  function createNavigationMenu() {
+    // Get the navigation container element
+    var navContainer = document.getElementById('nav-container');
+
+    // Create Home link
+    var homeLink = document.createElement('a');
+    homeLink.href = '#home';
+    homeLink.textContent = 'Home';
+
+    // Create About link
+    var aboutLink = document.createElement('a');
+    aboutLink.href = '#about';
+    aboutLink.textContent = 'About';
+
+    // Create Contact link
+    var contactLink = document.createElement('a');
+    contactLink.href = '#contact';
+    contactLink.textContent = 'Contact';
+
+    // Append links to the navigation container
+    navContainer.appendChild(homeLink);
+    navContainer.appendChild(document.createTextNode(' | ')); // Add a separator
+    navContainer.appendChild(aboutLink);
+    navContainer.appendChild(document.createTextNode(' | ')); // Add a separator
+    navContainer.appendChild(contactLink);
+  }
+
+  // Call the function to create the navigation menu
+  createNavigationMenu();
+</script>
+
+</body>
+</html>
